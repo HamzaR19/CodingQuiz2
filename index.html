@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Quiz</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
-    
+  <div id="quiz-container">
+    <h1>Coding Quiz</h1>
+    <div id="question-container"></div>
+    <div id="options-container"></div>
+    <button id="start-btn">Start Quiz</button>
+    <input type="text" id="initials-input" placeholder="Enter your initials">
+    <button id="submit-btn">Submit</button>
+    <div id="timer">Time: <span id="time-left"></span></div>
+    <div id="score">Score: <span id="user-score"></span></div>
+    <button id="restart-btn">Restart Quiz</button>
+  </div>
+  <div id="leaderboard-container">
+    <h2>High Scores Leaderboard</h2>
+    <ul id="leaderboard-list"></ul>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
