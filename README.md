@@ -37,6 +37,8 @@ There is very little installation neccesary for this application. Just follow th
 
 ## Usage Information
 
+[Click Here Timed Coding Quiz](https://hamzar19.github.io/CodingQuiz2/)
+
 This application is used to strengthen your knowledge of coding utilzing multiple choice questions to challenge your coding database.
 
 ## Contribution Guidelines
