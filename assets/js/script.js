@@ -71,3 +71,21 @@ var questions = [
       var submitBtn = document.getElementById("submit-btn");
       var leaderboardList = document.getElementById("leaderboard-list");
       var restartBtn = document.getElementById("restart-btn");
+
+      function startQuiz() {
+        startBtn.style.display = "none";
+        restartBtn.style.display = "none";
+        timerInterval = setInterval(updateTimer, 1000);
+        showQuestion();
+      }
+
+      function updateTimer() {
+        timeLeft--;
+        timeLeftDisplay.textContent = timeLeft;
+      
+        if (timeLeft <= 0) {
+          endQuiz();
+        }
+      }
+
+       
