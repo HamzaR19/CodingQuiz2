@@ -134,3 +134,25 @@ var questions = [
         submitBtn.style.display = "inline";
         restartBtn.style.display = "inline";
       }
+
+      function saveScore() {
+        var initials = initialsInput.value.trim();
+      
+        if (initials !== "") {
+          var score = {
+            initials: initials,
+            score: userScore
+          };
+      
+          leaderboard.push(score);
+          leaderboard.sort((a, b) => b.score - a.score);
+          localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+      
+          updateLeaderboard();
+        }
+      
+        initialsInput.value = "";
+        initialsInput.style.display = "none";
+        submitBtn.style.display = "none";
+      }
+      
