@@ -55,7 +55,7 @@ var questions = [
         }
       ];
       
-
+    //   Variables
       var currentQuestionIndex = 0;
       var timeLeft = 60;
       var timerInterval;
@@ -72,13 +72,14 @@ var questions = [
       var leaderboardList = document.getElementById("leaderboard-list");
       var restartBtn = document.getElementById("restart-btn");
 
+    //   Start quiz
       function startQuiz() {
         startBtn.style.display = "none";
         restartBtn.style.display = "none";
         timerInterval = setInterval(updateTimer, 1000);
         showQuestion();
       }
-
+    //   Update timer
       function updateTimer() {
         timeLeft--;
         timeLeftDisplay.textContent = timeLeft;
@@ -87,7 +88,8 @@ var questions = [
           endQuiz();
         }
       }
-
+    
+      //   Show question
       function showQuestion() {
         var currentQuestion = questions[currentQuestionIndex];
         questionContainer.textContent = currentQuestion.question;
@@ -103,6 +105,7 @@ var questions = [
         }
       }
 
+    //   Check answer
       function checkAnswer() {
         var selectedOption = this.getAttribute("data-answer");
         var currentQuestion = questions[currentQuestionIndex];
@@ -122,6 +125,7 @@ var questions = [
         }
       }
 
+    //   End quiz
       function endQuiz() {
         clearInterval(timerInterval);
       
@@ -135,6 +139,7 @@ var questions = [
         restartBtn.style.display = "inline";
       }
 
+    //   Save score to local storage
       function saveScore() {
         var initials = initialsInput.value.trim();
       
@@ -156,6 +161,7 @@ var questions = [
         submitBtn.style.display = "none";
       }
 
+    //   Restart quiz
       function restartQuiz() {
         currentQuestionIndex = 0;
         timeLeft = 60;
@@ -167,6 +173,7 @@ var questions = [
         startBtn.style.display = "inline";
       }
       
+    //   Leaderboard functions
       function updateLeaderboard() {
         leaderboardList.innerHTML = "";
       
@@ -176,3 +183,14 @@ var questions = [
           leaderboardList.appendChild(listItem);
         }
       }
+
+// Event listeners
+startBtn.addEventListener("click", startQuiz);
+submitBtn.addEventListener("click", saveScore);
+restartBtn.addEventListener("click", restartQuiz);
+
+// Load leaderboard from local storage
+if (localStorage.getItem("leaderboard")) {
+  leaderboard = JSON.parse(localStorage.getItem("leaderboard"));
+  updateLeaderboard();
+}
