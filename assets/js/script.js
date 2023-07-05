@@ -121,3 +121,16 @@ var questions = [
           endQuiz();
         }
       }
+
+      function endQuiz() {
+        clearInterval(timerInterval);
+      
+        questionContainer.textContent = "Completed!";
+        optionsContainer.innerHTML = "";
+        timeLeftDisplay.textContent = timeLeft;
+        userScoreDisplay.textContent = userScore;
+      
+        initialsInput.style.display = "inline";
+        submitBtn.style.display = "inline";
+        restartBtn.style.display = "inline";
+      }
