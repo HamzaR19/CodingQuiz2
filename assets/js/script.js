@@ -56,3 +56,18 @@ var questions = [
       ];
       
 
+      var currentQuestionIndex = 0;
+      var timeLeft = 60;
+      var timerInterval;
+      var userScore = 0;
+      var leaderboard = [];
+      
+      var startBtn = document.getElementById("start-btn");
+      var questionContainer = document.getElementById("question-container");
+      var optionsContainer = document.getElementById("options-container");
+      var timeLeftDisplay = document.getElementById("time-left");
+      var userScoreDisplay = document.getElementById("user-score");
+      var initialsInput = document.getElementById("initials-input");
+      var submitBtn = document.getElementById("submit-btn");
+      var leaderboardList = document.getElementById("leaderboard-list");
+      var restartBtn = document.getElementById("restart-btn");
