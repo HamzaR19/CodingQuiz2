@@ -155,4 +155,24 @@ var questions = [
         initialsInput.style.display = "none";
         submitBtn.style.display = "none";
       }
+
+      function restartQuiz() {
+        currentQuestionIndex = 0;
+        timeLeft = 60;
+        userScore = 0;
+        leaderboardList.innerHTML = "";
+        initialsInput.style.display = "none";
+        submitBtn.style.display = "none";
+        restartBtn.style.display = "none";
+        startBtn.style.display = "inline";
+      }
       
+      function updateLeaderboard() {
+        leaderboardList.innerHTML = "";
+      
+        for (var i = 0; i < leaderboard.length; i++) {
+          var listItem = document.createElement("li");
+          listItem.textContent = leaderboard[i].initials + ": " + leaderboard[i].score;
+          leaderboardList.appendChild(listItem);
+        }
+      }
