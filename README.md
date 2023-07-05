@@ -10,6 +10,8 @@ Hamza Rahman's README
 
  * [Installation](#installation)
 
+ * [Media](#media)
+
  * [Usage-Information](#usage-information)
 
  * [Contribution-Guidelines](#contribution-guidelines)
