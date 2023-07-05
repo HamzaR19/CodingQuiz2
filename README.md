@@ -28,7 +28,7 @@ A timed multiple-choice quiz on Javascript and basic knowledge that will store h
 
 ## Installation
 
-There is very little installation neccesary for this application. Just follow the link provided are start the quiz!
+There is very little installation neccesary for this application. Just follow the link provided and start the quiz!
 
 ## Media
 
@@ -39,7 +39,7 @@ There is very little installation neccesary for this application. Just follow th
 
 [Click Here Timed Coding Quiz](https://hamzar19.github.io/CodingQuiz2/)
 
-This application is used to strengthen your knowledge of coding utilzing multiple choice questions to challenge your coding database.
+Click on the above link and follow the prompts. This application is used to strengthen your knowledge of coding utilzing multiple choice questions to challenge your coding database.
 
 ## Contribution Guidelines
 
