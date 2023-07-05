@@ -28,6 +28,11 @@ A timed multiple-choice quiz on Javascript and basic knowledge that will store h
 
 There is very little installation neccesary for this application. Just follow the link provided are start the quiz!
 
+## Media
+
+![20230704_232535](https://github.com/HamzaR19/CodingQuiz2/assets/132932060/ed18aebb-9d8a-420e-bdfe-fa6e68ad6121)
+![20230704_232546](https://github.com/HamzaR19/CodingQuiz2/assets/132932060/50e3496e-b766-4b63-8b81-8e60037c6886)
+
 ## Usage Information
 
 This application is used to strengthen your knowledge of coding utilzing multiple choice questions to challenge your coding database.
