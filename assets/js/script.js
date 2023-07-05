@@ -88,4 +88,36 @@ var questions = [
         }
       }
 
-       
+      function showQuestion() {
+        var currentQuestion = questions[currentQuestionIndex];
+        questionContainer.textContent = currentQuestion.question;
+      
+        optionsContainer.innerHTML = "";
+      
+        for (var i = 0; i < currentQuestion.options.length; i++) {
+          var optionBtn = document.createElement("button");
+          optionBtn.textContent = currentQuestion.options[i];
+          optionBtn.setAttribute("data-answer", currentQuestion.options[i]);
+          optionBtn.addEventListener("click", checkAnswer);
+          optionsContainer.appendChild(optionBtn);
+        }
+      }
+
+      function checkAnswer() {
+        var selectedOption = this.getAttribute("data-answer");
+        var currentQuestion = questions[currentQuestionIndex];
+      
+        if (selectedOption === currentQuestion.answer) {
+          userScore++;
+        } else {
+          timeLeft -= 10;
+        }
+      
+        currentQuestionIndex++;
+      
+        if (currentQuestionIndex < questions.length) {
+          showQuestion();
+        } else {
+          endQuiz();
+        }
+      }
